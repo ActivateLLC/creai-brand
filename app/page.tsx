@@ -78,6 +78,9 @@ export default function Home() {
               <span className="font-display text-2xl tracking-tight">CreAI</span>
             </a>
             <div className="flex items-center gap-7 font-mono-label text-[11px] tracking-[0.22em] uppercase">
+              <a href="/pricing" className="text-cream-soft hover:text-cream transition-colors hidden sm:block">
+                Pricing
+              </a>
               <a href="#flow" className="text-cream-soft hover:text-cream transition-colors hidden sm:block">
                 How it flows
               </a>
@@ -311,6 +314,7 @@ export default function Home() {
                 <span>© 2026 CreAI. All rights reserved.</span>
               </div>
               <div className="flex gap-6 font-mono-label text-[11px] tracking-[0.2em] uppercase">
+                <a href="/pricing" className="text-cream-soft hover:text-cream">Pricing</a>
                 <a href="/privacy" className="text-cream-soft hover:text-cream">Privacy</a>
                 <a href="/terms" className="text-cream-soft hover:text-cream">Terms</a>
               </div>

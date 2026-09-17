@@ -27,6 +27,9 @@ export default function Terms() {
         <p>Credits are prepaid, are not cash, cannot be transferred, and are non-refundable except where the law requires or where we charged you in error. We may change pack prices or credit rates for future purchases; credits you already hold keep their value. If we end the service, we will refund unused purchased credits.</p>
       </Section>
 
+      <Section n="03b" title="Plans and renewals">
+        <p>Paid plans (Launch and Growth) renew automatically each month or year until you cancel. We email you before each renewal. You can cancel in one tap from Credits → Manage plan; your plan stays active until the end of the period you paid for, and paid periods aren&apos;t refunded except where the law requires. Monthly plan credits are added each month you&apos;re subscribed and don&apos;t expire while your account is open. A yearly plan includes one standard domain registration per plan year and covers renewals of domains bought through CreAI while it&apos;s active. If a plan ends, your published site moves to its free CreAI address; we don&apos;t take it offline. Prices may change for future periods with at least 30 days&apos; notice.</p>
+      </Section>
       <Section n="04" title="Your content">
         <p>You own what you bring to CreAI and what CreAI creates for you, to the extent the law allows. You give us permission to host, process and transmit it only as needed to run the service for you. You are responsible for your content and for having the rights to use it, including images, text and trademarks.</p>
       </Section>

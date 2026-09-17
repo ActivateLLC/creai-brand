@@ -16,6 +16,7 @@ export function LegalPage({ title, intro, children }: { title: string; intro: st
             <span className="font-display text-2xl tracking-tight">CreAI</span>
           </Link>
           <div className="flex gap-6 font-mono-label text-[11px] tracking-[0.22em] uppercase">
+            <Link href="/pricing" className="text-cream-soft hover:text-cream">Pricing</Link>
             <Link href="/privacy" className="text-cream-soft hover:text-cream">Privacy</Link>
             <Link href="/terms" className="text-cream-soft hover:text-cream">Terms</Link>
           </div>
