@@ -12,6 +12,7 @@ const MARQUEE = [
   'ONE SENTENCE IN · INSTANT PREVIEW',
   'THE AGENT DRAFTS — YOU DECIDE',
   'NO CODE · NO TEMPLATES · NO KIDDING',
+  'SITES · APPS · BROWSER GAMES',
   'YOU OWN THE OUTPUT',
   'WORKING BEATS WAITLIST',
 ];
@@ -113,9 +114,10 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
               <div className="max-w-md">
                 <p className="text-cream-soft leading-relaxed mb-6">
-                  Describe your business in a sentence. Watch a site — or a working app — take
-                  shape beside the conversation, reviewed on a phone and a desktop before you
-                  see it. Publish when you&apos;re ready. Nothing goes live until you say so.
+                  Describe it in a sentence. Watch a site, a working app, or a playable game
+                  take shape beside the conversation — reviewed on a phone and a desktop, and
+                  run, before you see it. Publish when you&apos;re ready. Nothing goes live until
+                  you say so.
                 </p>
                 <div className="flex flex-wrap items-center gap-3">
                   <a
@@ -224,6 +226,7 @@ export default function Home() {
                 { lead: 'Taste is the interface.', rest: 'Anyone can generate. Choosing brilliantly is the whole game.' },
                 { lead: 'The agent drafts. You decide.', rest: 'Nothing we ship sends, posts or spends on its own. That’s not a limit — it’s the design.' },
                 { lead: 'Magic you can watch.', rest: 'Every change lands on screen the instant it happens. No black boxes. No surprises.' },
+                { lead: 'Flexible by design.', rest: 'Owners describe it and publish. Developers get real code, real files and their own domain — no lock-in, no export tax.' },
                 { lead: 'Nothing ships unchecked.', rest: 'Every build is rendered on a phone and a desktop, run, and reviewed before it reaches you.' },
                 { lead: 'Working beats waitlist.', rest: 'We ship things you can touch today — not visions. Even the art behind this page is painted live.' },
               ].map((t, i) => (
@@ -289,7 +292,7 @@ export default function Home() {
                   <span className="font-display text-xl tracking-tight">CreAI</span>
                 </a>
                 <p className="text-cream-soft text-sm leading-relaxed max-w-xs">
-                  Build a site or a working app by describing it, then launch when it&apos;s right.
+                  Build a site, an app or a game by describing it, then launch when it&apos;s right.
                 </p>
               </div>
               <div>
