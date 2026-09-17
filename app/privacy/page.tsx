@@ -41,7 +41,7 @@ export default function Privacy() {
           <li>Google — sign-in (when you choose it)</li>
           <li>Webflow and other platforms you connect — to make the changes you ask for</li>
           <li>Postiz (run by CreAI) and the social networks you connect — to publish the posts you approve</li>
-          <li>Cloudflare — DNS for domains you connect</li>
+          <li>Cloudflare — DNS for domains you connect, and registration of domains you buy (your registrant name, address, email and phone go to the registry, with WHOIS privacy where the domain ending allows it)</li>
           <li>Google Fonts and esm.sh — fonts and open-source code libraries loaded by site and app previews (they see the viewer&apos;s IP address, as any website font or library host does)</li>
         </ul>
         <p>We may also disclose information if required by law, or to protect the rights, safety or security of our users or the service.</p>
