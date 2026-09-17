@@ -6,20 +6,31 @@ export interface Venture {
   id: string;
   name: string;
   url: string | null; // null = not yet public
-  status: 'live' | 'in-development';
+  status: 'live' | 'preview' | 'in-development';
   tagline: string;
   detail: string;
 }
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://api-production-2412f.up.railway.app';
+
 export const ventures: Venture[] = [
+  {
+    id: 'launch',
+    name: 'CreAI Launch',
+    url: APP_URL,
+    status: 'preview',
+    tagline: 'Talk. Watch it build. Launch.',
+    detail:
+      'Describe your business and watch your site come together live, beside the chat. Connect your domain, draft your first campaign, approve every step. Publishing to your own domain is next.',
+  },
   {
     id: 'skills',
     name: 'CreAI Skills',
     url: 'https://skills.creai.dev',
     status: 'live',
-    tagline: 'Working AI agents you own.',
+    tagline: 'Agents that work. Yours to keep.',
     detail:
-      'Automation kits and agent skills for lead qualification, inbox triage, meetings, and content — complete, tested, and yours after one payment. Live today, with a free skill to try.',
+      'Plug-and-play automation kits for lead qualification, inbox triage, meetings and content — tested, complete, and yours after one payment. Try one free.',
   },
   {
     id: 'activate',

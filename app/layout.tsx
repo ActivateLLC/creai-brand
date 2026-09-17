@@ -11,25 +11,25 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.creai.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: SITE_URL },
-  title: "CreAI — Where Creativity Meets AI",
+  title: "CreAI — Say it. See it. Own it.",
   description:
-    "CreAI is a creative intelligence studio: ventures where human taste directs machine capability. CreAI Skills is live today; more rooms are being built.",
-  keywords: "CreAI, creativity meets AI, AI studio, AI agents, agent skills, generative art",
+    "Describe your business in one sentence. CreAI builds your site live, beside the conversation, then helps you connect your domain and draft your first campaign. Nothing goes out without your yes.",
+  keywords: "CreAI, AI website builder, build to launch, AI agent, small business website, AI marketing, agent skills",
   authors: [{ name: "CreAI" }],
   openGraph: {
-    title: "CreAI — Where Creativity Meets AI",
-    description: "A creative intelligence studio. Human taste directs machine capability.",
+    title: "CreAI — Say it. See it. Own it.",
+    description: "One sentence in. Your site, built live. Your domain and first campaign — every step on your yes.",
     url: SITE_URL,
     siteName: "CreAI",
     locale: "en_US",
     type: "website",
     // JPEG on purpose: iMessage and WhatsApp drop preview images much over 300 KB.
-    images: [{ url: "/og.jpg", width: 1200, height: 630, type: "image/jpeg", alt: "CreAI — where creativity meets AI" }],
+    images: [{ url: "/og.jpg", width: 1200, height: 630, type: "image/jpeg", alt: "CreAI — say it, see it, own it" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CreAI — Where Creativity Meets AI",
-    description: "A creative intelligence studio. Human taste directs machine capability.",
+    title: "CreAI — Say it. See it. Own it.",
+    description: "One sentence in. Your site, built live. Your domain and first campaign — every step on your yes.",
     images: ["/og.jpg"],
   },
   robots: { index: true, follow: true },

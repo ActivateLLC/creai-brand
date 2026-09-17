@@ -3,14 +3,35 @@ import { GenerativeCanvas } from '@/components/generative-canvas';
 import { Reveal } from '@/components/reveal';
 import { LogoMark } from '@/components/icons';
 
-const HEADLINE = ['Creativity,', 'meet', 'AI.'];
+// Where the build-to-launch app lives. Set NEXT_PUBLIC_APP_URL once app.creai.dev is pointed.
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://api-production-2412f.up.railway.app';
+
+const HEADLINE = ['Say it.', 'See it.', 'Own it.'];
 
 const MARQUEE = [
-  'TASTE IS THE INTERFACE',
+  'ONE SENTENCE IN · INSTANT PREVIEW',
   'THE AGENT DRAFTS — YOU DECIDE',
-  'WORKING BEATS WAITLIST',
-  'PROOF OVER PROMISE',
+  'NO CODE · NO TEMPLATES · NO KIDDING',
   'YOU OWN THE OUTPUT',
+  'WORKING BEATS WAITLIST',
+];
+
+const FLOW = [
+  {
+    n: '01',
+    lead: 'Say it.',
+    rest: 'Type it or just talk. Describe what you do in plain words — no forms, no templates, no jargon.',
+  },
+  {
+    n: '02',
+    lead: 'See it.',
+    rest: 'Your site takes shape in real time, right beside the conversation. Every answer, every tweak — instantly on screen.',
+  },
+  {
+    n: '03',
+    lead: 'Own it.',
+    rest: 'Connect your domain, line up your first posts, keep everything you make. Nothing sends, posts or spends until you tap yes.',
+  },
 ];
 
 function MarqueeStrip() {
@@ -57,17 +78,17 @@ export default function Home() {
               <span className="font-display text-2xl tracking-tight">CreAI</span>
             </a>
             <div className="flex items-center gap-7 font-mono-label text-[11px] tracking-[0.22em] uppercase">
-              <a href="#index" className="text-cream-soft hover:text-cream transition-colors hidden sm:block">
-                Index
+              <a href="#flow" className="text-cream-soft hover:text-cream transition-colors hidden sm:block">
+                How it flows
               </a>
-              <a href="#atlas" className="text-cream-soft hover:text-cream transition-colors hidden sm:block">
-                Atlas
+              <a href="#index" className="text-cream-soft hover:text-cream transition-colors hidden sm:block">
+                Ventures
               </a>
               <a
-                href="https://skills.creai.dev"
+                href={APP_URL}
                 className="border border-leaf/60 hover:bg-leaf hover:text-night text-leaf px-4 py-2 transition-colors"
               >
-                Skills — Live
+                Start building
               </a>
             </div>
           </div>
@@ -77,20 +98,37 @@ export default function Home() {
         <header className="min-h-screen flex flex-col justify-end">
           <div className="max-w-6xl mx-auto px-6 w-full pb-10">
             <p className="font-mono-label text-[11px] tracking-[0.28em] uppercase text-cream-soft mb-6">
-              <span className="text-leaf">00</span> · The creative intelligence studio
+              <span className="text-leaf">00</span> · The build-to-launch studio
             </p>
-            <h1 className="font-display text-[17vw] md:text-[9.5rem] leading-[0.95] tracking-tight mb-8">
+            <h1 className="font-display text-[17vw] md:text-[9.5rem] leading-[0.95] tracking-tight mb-8 md:flex md:flex-wrap">
               {HEADLINE.map((word, i) => (
-                <span key={word} className="reveal-word mr-[0.22em]" style={{ animationDelay: `${0.2 + i * 0.22}s` }}>
+                <span key={`${i}-${word}`} className="reveal-word block md:inline whitespace-nowrap mr-[0.22em]" style={{ animationDelay: `${0.2 + i * 0.22}s` }}>
                   {word}
                 </span>
               ))}
             </h1>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
-              <p className="text-cream-soft leading-relaxed max-w-md">
-                Ventures where human taste directs machine capability. The field behind these
-                words is being painted live — for you, right now. Move, and it moves.
-              </p>
+              <div className="max-w-md">
+                <p className="text-cream-soft leading-relaxed mb-6">
+                  One sentence in. A beautifully designed site out — built live, right beside
+                  the conversation. Then your domain, your campaign, your call. Effortless for
+                  owners. Powerful for developers.
+                </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href={APP_URL}
+                    className="bg-leaf text-night hover:bg-cream px-6 py-3 font-mono-label text-[12px] tracking-[0.2em] uppercase transition-colors"
+                  >
+                    Start building →
+                  </a>
+                  <a
+                    href="https://skills.creai.dev"
+                    className="border hairline hover:border-leaf text-cream px-6 py-3 font-mono-label text-[12px] tracking-[0.2em] uppercase transition-colors"
+                  >
+                    Explore Skills
+                  </a>
+                </div>
+              </div>
               <p className="font-mono-label text-[11px] tracking-[0.2em] text-cream-soft/60 uppercase shrink-0">
                 scroll ↓
               </p>
@@ -99,11 +137,34 @@ export default function Home() {
           <MarqueeStrip />
         </header>
 
-        {/* Room 01 — the index */}
+        {/* Room 01 — how it flows */}
+        <section id="flow" className="py-32">
+          <div className="max-w-6xl mx-auto px-6">
+            <Reveal>
+              <RoomLabel n="01" title="How it flows" />
+            </Reveal>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {FLOW.map((f, i) => (
+                <Reveal key={f.n} delay={i * 110}>
+                  <p className="font-mono-label text-sm text-cream-soft/60 mb-4">{f.n}</p>
+                  <h2 className="font-display text-5xl md:text-6xl tracking-tight text-leaf mb-5">{f.lead}</h2>
+                  <p className="text-cream-soft leading-relaxed">{f.rest}</p>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal delay={360}>
+              <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mt-14">
+                In preview now. Publishing to your own domain is rolling out next.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Room 02 — the index */}
         <section id="index" className="py-28 bg-night/40">
           <div className="max-w-6xl mx-auto px-6">
             <Reveal>
-              <RoomLabel n="01" title="Index of ventures" />
+              <RoomLabel n="02" title="Ventures" />
             </Reveal>
             <div className="border-t hairline">
               {ventures.map((v, i) => (
@@ -129,6 +190,10 @@ export default function Home() {
                         <span className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-leaf">
                           ● live — visit ↗
                         </span>
+                      ) : v.status === 'preview' ? (
+                        <span className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-leaf/80">
+                          ◐ preview — try it ↗
+                        </span>
                       ) : (
                         <span className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50">
                           ○ in development
@@ -140,22 +205,23 @@ export default function Home() {
               ))}
             </div>
             <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mt-6">
-              No waitlists kept. A venture appears here when it works.
+              No waitlists. A venture shows up here the moment it works.
             </p>
           </div>
         </section>
 
-        {/* Room 02 — thesis */}
+        {/* Room 03 — thesis */}
         <section className="py-32">
           <div className="max-w-4xl mx-auto px-6">
             <Reveal>
-              <RoomLabel n="02" title="Thesis" />
+              <RoomLabel n="03" title="What we believe" />
             </Reveal>
             <div className="space-y-16">
               {[
-                { lead: 'Taste is the interface.', rest: 'Machines can generate anything — choosing well is now the entire job.' },
-                { lead: 'The agent drafts. You decide.', rest: 'Nothing we ship sends, posts, or spends on its own. That is a design principle, not a limitation.' },
-                { lead: 'Working beats waitlist.', rest: 'We announce ships, not visions. The painting behind this page is generated live; the products are downloadable today.' },
+                { lead: 'Taste is the interface.', rest: 'Anyone can generate. Choosing brilliantly is the whole game.' },
+                { lead: 'The agent drafts. You decide.', rest: 'Nothing we ship sends, posts or spends on its own. That’s not a limit — it’s the design.' },
+                { lead: 'Magic you can watch.', rest: 'Every change lands on screen the instant it happens. No black boxes. No surprises.' },
+                { lead: 'Working beats waitlist.', rest: 'We ship things you can touch today — not visions. Even the art behind this page is painted live.' },
               ].map((t, i) => (
                 <Reveal key={t.lead} delay={i * 100}>
                   <p className="font-display text-3xl md:text-5xl leading-[1.15] tracking-tight">
@@ -168,11 +234,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Room 03 — atlas */}
+        {/* Room 04 — atlas */}
         <section id="atlas" className="py-28 bg-night/40">
           <div className="max-w-6xl mx-auto px-6">
             <Reveal>
-              <RoomLabel n="03" title="Atlas of Flow" />
+              <RoomLabel n="04" title="Atlas of Flow" />
             </Reveal>
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-14 items-center">
               <div className="lg:col-span-3">
@@ -210,19 +276,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Room 04 — colophon / contact */}
+        {/* Room 05 — colophon / contact */}
         <footer className="py-24 border-t hairline bg-night-deep/70">
           <div className="max-w-6xl mx-auto px-6">
-            <RoomLabel n="04" title="Colophon" />
+            <RoomLabel n="05" title="Colophon" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
               <div>
                 <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mb-3">Studio</p>
                 <p className="text-cream-soft text-sm leading-relaxed">
-                  CreAI — the creative intelligence studio behind{' '}
+                  CreAI — the build-to-launch studio behind CreAI Launch and{' '}
                   <a href="https://skills.creai.dev" className="text-leaf hover:underline underline-offset-4">
                     skills.creai.dev
                   </a>
-                  . Built in the open, largely by its own agents, entirely under human direction.
+                  . Designed with care, built largely by its own agents, always under human direction.
                 </p>
               </div>
               <div>
