@@ -46,6 +46,9 @@ export default function Terms() {
 
       <Section n="08" title="Domains, DNS and third-party services">
         <p>Domain registration, DNS and publishing depend on third parties such as registrars, DNS providers and hosting platforms. Changes can take time to propagate, and we are not responsible for outages or policies of services we don&apos;t control.</p>
+      
+        <p>When you buy a domain through CreAI, it is registered in your name with the contact details you give us, through Cloudflare Registrar. You pay in credits at the registry&apos;s price plus a small fee, shown before you buy. Registrations can&apos;t be refunded once complete; if a registration fails, your credits are returned. CreAI renews your domain each year from your credits and tells you beforehand; if your balance can&apos;t cover a renewal, we&apos;ll contact you before it lapses. You can move your domain to another registrar at any time.</p>
+        <p>Sites and apps you publish are served on a CreAI address or your own domain until you unpublish them, and you are responsible for what you publish.</p>
       </Section>
 
       <Section n="09" title="Disclaimers">
