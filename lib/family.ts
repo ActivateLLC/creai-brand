@@ -18,10 +18,10 @@ export const ventures: Venture[] = [
     id: 'launch',
     name: 'CreAI Launch',
     url: APP_URL,
-    status: 'preview',
+    status: 'live',
     tagline: 'Talk. Watch it build. Launch.',
     detail:
-      'Describe your business and watch your site come together live, beside the chat. Connect your domain, draft your first campaign, approve every step. Publishing to your own domain is next.',
+      'Describe your business and watch a site — or a working app — come together live beside the chat. Every build is reviewed on a phone and a desktop before you see it. Publish in one tap; nothing goes live until you say so.',
   },
   {
     id: 'skills',

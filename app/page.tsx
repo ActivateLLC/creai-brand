@@ -30,7 +30,7 @@ const FLOW = [
   {
     n: '03',
     lead: 'Own it.',
-    rest: 'Connect your domain, line up your first posts, keep everything you make. Nothing sends, posts or spends until you tap yes.',
+    rest: 'Publish in one tap, line up your first posts, keep everything you make. Nothing sends, posts or spends until you tap yes.',
   },
 ];
 
@@ -113,9 +113,9 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
               <div className="max-w-md">
                 <p className="text-cream-soft leading-relaxed mb-6">
-                  One sentence in. A beautifully designed site out — built live, right beside
-                  the conversation. Then your domain, your campaign, your call. Effortless for
-                  owners. Powerful for developers.
+                  Describe your business in a sentence. Watch a site — or a working app — take
+                  shape beside the conversation, reviewed on a phone and a desktop before you
+                  see it. Publish when you&apos;re ready. Nothing goes live until you say so.
                 </p>
                 <div className="flex flex-wrap items-center gap-3">
                   <a
@@ -157,7 +157,7 @@ export default function Home() {
             </div>
             <Reveal delay={360}>
               <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mt-14">
-                In preview now. Publishing to your own domain is rolling out next.
+                Free to build. Publishing included. You keep what you make.
               </p>
             </Reveal>
           </div>
@@ -224,6 +224,7 @@ export default function Home() {
                 { lead: 'Taste is the interface.', rest: 'Anyone can generate. Choosing brilliantly is the whole game.' },
                 { lead: 'The agent drafts. You decide.', rest: 'Nothing we ship sends, posts or spends on its own. That’s not a limit — it’s the design.' },
                 { lead: 'Magic you can watch.', rest: 'Every change lands on screen the instant it happens. No black boxes. No surprises.' },
+                { lead: 'Nothing ships unchecked.', rest: 'Every build is rendered on a phone and a desktop, run, and reviewed before it reaches you.' },
                 { lead: 'Working beats waitlist.', rest: 'We ship things you can touch today — not visions. Even the art behind this page is painted live.' },
               ].map((t, i) => (
                 <Reveal key={t.lead} delay={i * 100}>
@@ -261,14 +262,13 @@ export default function Home() {
                     Plate 001 — Directed Current
                   </h2>
                   <p className="text-cream-soft leading-relaxed mb-4">
-                    The studio documents its own thesis the way a cartographer maps a
-                    coastline: two thousand individually placed strokes, one current, one
-                    annotated node where the flow bends. The decision.
+                    Two thousand individually placed strokes, one current, and a single
+                    annotated node where the flow bends: the decision. It is the same idea the
+                    product runs on — the work moves, a person chooses.
                   </p>
                   <p className="text-cream-soft/70 leading-relaxed text-sm mb-6">
-                    Drawn by our generative systems under a written design philosophy, in
-                    the studio&apos;s daylight ink. Its living, nocturnal sibling surrounds
-                    you now — seeded fresh for every visitor.
+                    Drawn by our own generative systems, never stock. The living version
+                    surrounds you now, seeded fresh for every visitor.
                   </p>
                   <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50">
                     obs. 2026-09 · n = 2,040 strokes · archival
@@ -279,46 +279,47 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Room 05 — colophon / contact */}
-        <footer className="py-24 border-t hairline bg-night-deep/70">
-          <div className="max-w-6xl mx-auto px-6">
-            <RoomLabel n="05" title="Colophon" />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-              <div>
-                <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mb-3">Studio</p>
-                <p className="text-cream-soft text-sm leading-relaxed">
-                  CreAI — the build-to-launch studio behind CreAI Launch and{' '}
-                  <a href="https://skills.creai.dev" className="text-leaf hover:underline underline-offset-4">
-                    skills.creai.dev
-                  </a>
-                  . Designed with care, built largely by its own agents, always under human direction.
+        {/* Footer */}
+        <footer className="border-t hairline bg-night-deep/70">
+          <div className="max-w-6xl mx-auto px-6 py-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+              <div className="col-span-2 md:col-span-1">
+                <a href="#" className="flex items-center gap-2.5 mb-4">
+                  <LogoMark className="w-6 h-6 text-leaf" />
+                  <span className="font-display text-xl tracking-tight">CreAI</span>
+                </a>
+                <p className="text-cream-soft text-sm leading-relaxed max-w-xs">
+                  Build a site or a working app by describing it, then launch when it&apos;s right.
                 </p>
               </div>
               <div>
-                <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mb-3">Contact</p>
-                <a href="mailto:contact@creai.dev" className="text-cream hover:text-leaf transition-colors font-display text-2xl tracking-tight">
+                <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mb-4">Product</p>
+                <ul className="space-y-2.5 text-sm">
+                  <li><a href={APP_URL} className="text-cream-soft hover:text-cream transition-colors">Start building</a></li>
+                  <li><a href="/pricing" className="text-cream-soft hover:text-cream transition-colors">Pricing</a></li>
+                  <li><a href="#flow" className="text-cream-soft hover:text-cream transition-colors">How it flows</a></li>
+                  <li><a href="https://skills.creai.dev" className="text-cream-soft hover:text-cream transition-colors">Skills</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mb-4">Company</p>
+                <ul className="space-y-2.5 text-sm">
+                  <li><a href="#index" className="text-cream-soft hover:text-cream transition-colors">Ventures</a></li>
+                  <li><a href="/privacy" className="text-cream-soft hover:text-cream transition-colors">Privacy</a></li>
+                  <li><a href="/terms" className="text-cream-soft hover:text-cream transition-colors">Terms</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mb-4">Contact</p>
+                <a href="mailto:contact@creai.dev" className="text-cream hover:text-leaf transition-colors text-sm break-all">
                   contact@creai.dev
                 </a>
-              </div>
-              <div>
-                <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mb-3">Set in</p>
-                <p className="text-cream-soft text-sm leading-relaxed">
-                  Gloock &amp; Space Grotesk, instrumented with IBM Plex Mono. Artwork
-                  generated live, never stock. Grain is intentional.
-                </p>
+                <p className="text-cream-soft/60 text-sm mt-3 leading-relaxed">Milwaukee, Wisconsin</p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-8 border-t hairline">
-              <div className="flex items-center gap-2.5 text-cream-soft text-sm">
-                <LogoMark className="w-5 h-5 text-leaf" />
-                <span>© 2026 CreAI. All rights reserved.</span>
-              </div>
-              <div className="flex gap-6 font-mono-label text-[11px] tracking-[0.2em] uppercase">
-                <a href="/pricing" className="text-cream-soft hover:text-cream">Pricing</a>
-                <a href="/privacy" className="text-cream-soft hover:text-cream">Privacy</a>
-                <a href="/terms" className="text-cream-soft hover:text-cream">Terms</a>
-              </div>
-              <p className="font-mono-label text-[10px] tracking-[0.16em] uppercase text-cream-soft/40 max-w-xl md:text-right leading-relaxed">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-8 border-t hairline">
+              <p className="text-cream-soft/60 text-sm">© 2026 CreAI. All rights reserved.</p>
+              <p className="font-mono-label text-[10px] tracking-[0.16em] uppercase text-cream-soft/40 leading-relaxed md:text-right">
                 Claude is a trademark of Anthropic. CreAI is not affiliated with or endorsed by Anthropic.
               </p>
             </div>
