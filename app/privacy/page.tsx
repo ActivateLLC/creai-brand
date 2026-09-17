@@ -26,18 +26,21 @@ export default function Privacy() {
       </Section>
 
       <Section n="03" title="AI processing">
-        <p>Your messages and site content are sent to our AI provider, Anthropic, to generate replies and changes. This happens only to serve your request. Results can be wrong, so nothing is published, posted or charged without your approval.</p>
+        <p>Your messages and site content are sent to our AI providers (Anthropic, and Meta where that model is in use) to generate replies and changes. Descriptions of images for your posts are sent to Hugging Face and its hosting partners to create those images. This happens only to serve your request. Results can be wrong, so nothing is published, posted or charged without your approval.</p>
       </Section>
 
       <Section n="04" title="Who helps us run CreAI">
         <p>We share data only with service providers that process it on our behalf, under their own security and privacy commitments:</p>
         <ul className="list-disc pl-6 space-y-1">
           <li>Anthropic — AI model processing</li>
+          <li>Meta — AI model processing (Meta Model API), where enabled</li>
+          <li>Hugging Face and its inference partners (such as fal) — image generation</li>
           <li>Railway — application hosting and databases</li>
           <li>Stripe — payment processing</li>
           <li>Resend — transactional email</li>
           <li>Google — sign-in (when you choose it)</li>
           <li>Webflow and other platforms you connect — to make the changes you ask for</li>
+          <li>Postiz (run by CreAI) and the social networks you connect — to publish the posts you approve</li>
           <li>Cloudflare — DNS for domains you connect</li>
         </ul>
         <p>We may also disclose information if required by law, or to protect the rights, safety or security of our users or the service.</p>
