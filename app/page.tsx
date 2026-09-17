@@ -310,6 +310,10 @@ export default function Home() {
                 <LogoMark className="w-5 h-5 text-leaf" />
                 <span>© 2026 CreAI. All rights reserved.</span>
               </div>
+              <div className="flex gap-6 font-mono-label text-[11px] tracking-[0.2em] uppercase">
+                <a href="/privacy" className="text-cream-soft hover:text-cream">Privacy</a>
+                <a href="/terms" className="text-cream-soft hover:text-cream">Terms</a>
+              </div>
               <p className="font-mono-label text-[10px] tracking-[0.16em] uppercase text-cream-soft/40 max-w-xl md:text-right leading-relaxed">
                 Claude is a trademark of Anthropic. CreAI is not affiliated with or endorsed by Anthropic.
               </p>
