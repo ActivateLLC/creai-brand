@@ -11,7 +11,7 @@ export interface Venture {
   detail: string;
 }
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://api-production-2412f.up.railway.app';
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.creai.dev';
 
 export const ventures: Venture[] = [
   {

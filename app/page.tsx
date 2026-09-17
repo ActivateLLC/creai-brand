@@ -3,8 +3,8 @@ import { GenerativeCanvas } from '@/components/generative-canvas';
 import { Reveal } from '@/components/reveal';
 import { LogoMark } from '@/components/icons';
 
-// Where the build-to-launch app lives. Set NEXT_PUBLIC_APP_URL once app.creai.dev is pointed.
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://api-production-2412f.up.railway.app';
+// Where the build-to-launch app lives. Override with NEXT_PUBLIC_APP_URL if the app moves.
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.creai.dev';
 
 const HEADLINE = ['Say it.', 'See it.', 'Own it.'];
 
