@@ -319,8 +319,8 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-8 border-t hairline">
               <p className="text-cream-soft/60 text-sm">© 2026 CreAI. All rights reserved.</p>
-              <p className="font-mono-label text-[10px] tracking-[0.16em] uppercase text-cream-soft/40 leading-relaxed md:text-right">
-                Claude is a trademark of Anthropic. CreAI is not affiliated with or endorsed by Anthropic.
+              <p className="text-cream-soft/50 text-sm md:text-right">
+                Built in Milwaukee. Nothing goes live without your approval.
               </p>
             </div>
           </div>

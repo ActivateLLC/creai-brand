@@ -72,7 +72,15 @@ export default function Privacy() {
         <p>CreAI is not directed to children under 16, and we do not knowingly collect their information. If you believe a child has given us information, contact us and we will delete it.</p>
       </Section>
 
-      <Section n="11" title="Changes">
+      <Section n="11" title="Where your data is processed">
+        <p>CreAI is operated from the United States, and our providers process data in the United States and other countries. If you are in the EEA or the UK, this means your information is transferred outside your country; we rely on the transfer safeguards our providers offer, such as the European Commission&apos;s standard contractual clauses, and we only use providers that commit to protecting it.</p>
+      </Section>
+
+      <Section n="12" title="Automated decisions">
+        <p>CreAI drafts sites, apps and posts automatically, and reviews its own work before showing it to you. These are suggestions, not decisions about you: nothing is registered, published, posted or charged without your approval, and no automated profiling affects your legal rights.</p>
+      </Section>
+
+      <Section n="13" title="Changes">
         <p>If we change this policy in a meaningful way, we will update the effective date and let account holders know before the change takes effect.</p>
       </Section>
     </LegalPage>
