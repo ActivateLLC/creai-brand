@@ -1,4 +1,4 @@
-// The CreAI venture family, as shown on the brand site. Edit freely —
+// The Creai venture family, as shown on the brand site. Edit freely —
 // descriptions for ventures still in development are deliberately neutral;
 // replace them as each venture becomes real.
 
@@ -16,7 +16,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.creai.dev';
 export const ventures: Venture[] = [
   {
     id: 'launch',
-    name: 'CreAI Launch',
+    name: 'Creai Launch',
     url: APP_URL,
     status: 'live',
     tagline: 'Talk. Watch it build. Launch.',
@@ -25,7 +25,7 @@ export const ventures: Venture[] = [
   },
   {
     id: 'skills',
-    name: 'CreAI Skills',
+    name: 'Creai Skills',
     url: 'https://skills.creai.dev',
     status: 'live',
     tagline: 'Agents that work. Yours to keep.',

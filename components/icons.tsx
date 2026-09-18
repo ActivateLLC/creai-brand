@@ -1,5 +1,5 @@
 /**
- * CreAI custom icon set. One family, drawn on a 24px grid: 1.75 stroke,
+ * Creai custom icon set. One family, drawn on a 24px grid: 1.75 stroke,
  * round caps and joins, currentColor throughout, one accent shape per icon.
  * No icon library — these are the brand.
  */
@@ -24,7 +24,7 @@ function Svg({ className, children }: IconProps & { children: React.ReactNode })
 }
 
 /**
- * Logo mark: the CreAI spectrum C on transparency (public/logo-mark.png),
+ * Logo mark: the Creai spectrum C on transparency (public/logo-mark.png),
  * so it sits directly on the page. The filled tile (public/logo.png) is
  * kept for the favicon, Apple icon and share card. Sized by the caller.
  */
@@ -33,7 +33,7 @@ export function LogoMark({ className }: IconProps) {
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src="/logo-mark.png"
-      alt="CreAI"
+      alt="Creai"
       width={122}
       height={122}
       draggable={false}

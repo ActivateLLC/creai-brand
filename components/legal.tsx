@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { LogoMark } from '@/components/icons';
 
 // The operator named on legal pages. Confirm before relying on these pages.
-export const OPERATOR = process.env.NEXT_PUBLIC_LEGAL_ENTITY || 'CreAI';
+export const OPERATOR = process.env.NEXT_PUBLIC_LEGAL_ENTITY || 'Creai';
 export const CONTACT = 'contact@creai.dev';
 export const EFFECTIVE = 'September 17, 2026';
 
@@ -13,7 +13,7 @@ export function LegalPage({ title, intro, children }: { title: string; intro: st
         <div className="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <LogoMark className="w-7 h-7" />
-            <span className="font-display text-2xl tracking-tight">CreAI</span>
+            <span className="font-display text-2xl tracking-tight">Creai</span>
           </Link>
           <div className="flex gap-6 font-mono-label text-[11px] tracking-[0.22em] uppercase">
             <Link href="/pricing" className="text-cream-soft hover:text-cream">Pricing</Link>

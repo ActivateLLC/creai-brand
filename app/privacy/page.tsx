@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { CONTACT, LegalPage, OPERATOR, Section } from '@/components/legal';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — CreAI',
-  description: 'What CreAI collects, why, who helps us run the service, and the choices you have.',
+  title: 'Privacy Policy — Creai',
+  description: 'What Creai collects, why, who helps us run the service, and the choices you have.',
   alternates: { canonical: '/privacy' },
 };
 
@@ -11,7 +11,7 @@ export default function Privacy() {
   return (
     <LegalPage
       title="Privacy Policy"
-      intro={`This policy explains what ${OPERATOR} ("CreAI", "we") collects when you use creai.dev and app.creai.dev, why we collect it, who helps us run the service, and the choices you have. We collect only what we need to build, edit and launch your site, and we never sell your personal information.`}
+      intro={`This policy explains what ${OPERATOR} ("Creai", "we") collects when you use creai.dev and app.creai.dev, why we collect it, who helps us run the service, and the choices you have. We collect only what we need to build, edit and launch your site, and we never sell your personal information.`}
     >
       <Section n="01" title="What we collect">
         <p><strong>Account details.</strong> Your email address, and your name if you sign in with Google. When you sign in with Google we receive only your basic profile (name, email and profile picture) and a unique account ID. We do not receive your Google password or access to your Gmail, Drive or other Google data.</p>
@@ -29,7 +29,7 @@ export default function Privacy() {
         <p>Your messages and site content are sent to our AI providers (Anthropic, and Meta where that model is in use) to generate replies and changes. Descriptions of images for your posts are sent to Hugging Face and its hosting partners to create those images. This happens only to serve your request. Results can be wrong, so nothing is published, posted or charged without your approval.</p>
       </Section>
 
-      <Section n="04" title="Who helps us run CreAI">
+      <Section n="04" title="Who helps us run Creai">
         <p>We share data only with service providers that process it on our behalf, under their own security and privacy commitments:</p>
         <ul className="list-disc pl-6 space-y-1">
           <li>Anthropic — AI model processing</li>
@@ -40,7 +40,7 @@ export default function Privacy() {
           <li>Resend — transactional email</li>
           <li>Google — sign-in (when you choose it)</li>
           <li>Webflow and other platforms you connect — to make the changes you ask for</li>
-          <li>Postiz (run by CreAI) and the social networks you connect — to publish the posts you approve</li>
+          <li>Postiz (run by Creai) and the social networks you connect — to publish the posts you approve</li>
           <li>Railway (storage on Tigris) — photos, videos and PDFs you upload, encrypted at rest; you can delete them any time under Files</li>
           <li>Cloudflare — DNS for domains you connect, and registration of domains you buy (your registrant name, address, email and phone go to the registry, with WHOIS privacy where the domain ending allows it)</li>
           <li>Google Fonts and esm.sh — fonts and open-source code libraries loaded by site and app previews (they see the viewer&apos;s IP address, as any website font or library host does)</li>
@@ -49,7 +49,7 @@ export default function Privacy() {
       </Section>
 
       <Section n="05" title="Google user data">
-        <p>CreAI&apos;s use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. We use Google sign-in data only to create and secure your account.</p>
+        <p>Creai&apos;s use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. We use Google sign-in data only to create and secure your account.</p>
       </Section>
 
       <Section n="06" title="Cookies and local storage">
@@ -69,15 +69,15 @@ export default function Privacy() {
       </Section>
 
       <Section n="10" title="Children">
-        <p>CreAI is not directed to children under 16, and we do not knowingly collect their information. If you believe a child has given us information, contact us and we will delete it.</p>
+        <p>Creai is not directed to children under 16, and we do not knowingly collect their information. If you believe a child has given us information, contact us and we will delete it.</p>
       </Section>
 
       <Section n="11" title="Where your data is processed">
-        <p>CreAI is operated from the United States, and our providers process data in the United States and other countries. If you are in the EEA or the UK, this means your information is transferred outside your country; we rely on the transfer safeguards our providers offer, such as the European Commission&apos;s standard contractual clauses, and we only use providers that commit to protecting it.</p>
+        <p>Creai is operated from the United States, and our providers process data in the United States and other countries. If you are in the EEA or the UK, this means your information is transferred outside your country; we rely on the transfer safeguards our providers offer, such as the European Commission&apos;s standard contractual clauses, and we only use providers that commit to protecting it.</p>
       </Section>
 
       <Section n="12" title="Automated decisions">
-        <p>CreAI drafts sites, apps and posts automatically, and reviews its own work before showing it to you. These are suggestions, not decisions about you: nothing is registered, published, posted or charged without your approval, and no automated profiling affects your legal rights.</p>
+        <p>Creai drafts sites, apps and posts automatically, and reviews its own work before showing it to you. These are suggestions, not decisions about you: nothing is registered, published, posted or charged without your approval, and no automated profiling affects your legal rights.</p>
       </Section>
 
       <Section n="13" title="Changes">

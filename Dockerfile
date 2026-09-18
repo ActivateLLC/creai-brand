@@ -1,4 +1,4 @@
-# Production Dockerfile for CreAI Web App
+# Production Dockerfile for Creai Web App
 # Multi-stage build for optimized image size
 
 # Stage 1: Dependencies

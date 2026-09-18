@@ -76,7 +76,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
             <a href="#" className="flex items-center gap-3">
               <LogoMark className="w-7 h-7 text-leaf" />
-              <span className="font-display text-2xl tracking-tight">CreAI</span>
+              <span className="font-display text-2xl tracking-tight">Creai</span>
             </a>
             <div className="flex items-center gap-7 font-mono-label text-[11px] tracking-[0.22em] uppercase">
               <a href="/pricing" className="text-cream-soft hover:text-cream transition-colors hidden sm:block">
@@ -289,7 +289,7 @@ export default function Home() {
               <div className="col-span-2 md:col-span-1">
                 <a href="#" className="flex items-center gap-2.5 mb-4">
                   <LogoMark className="w-6 h-6 text-leaf" />
-                  <span className="font-display text-xl tracking-tight">CreAI</span>
+                  <span className="font-display text-xl tracking-tight">Creai</span>
                 </a>
                 <p className="text-cream-soft text-sm leading-relaxed max-w-xs">
                   Build a site, an app or a game by describing it, then launch when it&apos;s right.
@@ -321,7 +321,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-8 border-t hairline">
-              <p className="text-cream-soft/60 text-sm">© 2026 CreAI. All rights reserved.</p>
+              <p className="text-cream-soft/60 text-sm">© 2026 Creai. All rights reserved.</p>
               <p className="text-cream-soft/50 text-sm md:text-right">
                 Built in Milwaukee. Nothing goes live without your approval.
               </p>

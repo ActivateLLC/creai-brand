@@ -5,7 +5,7 @@ import { LogoMark } from '@/components/icons';
 const APP_URL = 'https://app.creai.dev';
 
 export const metadata: Metadata = {
-  title: 'Pricing — CreAI',
+  title: 'Pricing — Creai',
   description:
     'Build free. Launch on your own domain from $10 a month. Cancel in one tap, and your site never goes dark.',
   alternates: { canonical: '/pricing' },
@@ -20,8 +20,8 @@ const PLANS = [
     features: [
       'Build sites and working apps by chat',
       '150 credits to start, top up any time',
-      'Publish on a free CreAI address',
-      'Small “Made with CreAI” badge',
+      'Publish on a free Creai address',
+      'Small “Made with Creai” badge',
     ],
   },
   {
@@ -34,7 +34,7 @@ const PLANS = [
       'Your own domain, hosted with HTTPS',
       'A domain included every year (yearly plan)',
       'Domain renewals covered (yearly plan)',
-      'No CreAI badge',
+      'No Creai badge',
       '1,000 credits every month',
     ],
   },
@@ -55,9 +55,9 @@ const PLANS = [
 const PROMISES = [
   ['No surprise renewals', 'We email you a week before any plan renews.'],
   ['Cancel in one tap', 'From Credits → Manage plan. No calls, no forms.'],
-  ['Never goes dark', 'If a plan ends, your site stays up on its free CreAI address.'],
+  ['Never goes dark', 'If a plan ends, your site stays up on its free Creai address.'],
   ['Your domain is yours', 'Registered in your name. Move it to another registrar any time.'],
-  ['Pay for work that ships', 'Fixing errors in apps CreAI built is on us.'],
+  ['Pay for work that ships', 'Fixing errors in apps Creai built is on us.'],
   ['See the cost first', 'Every message shows its likely credits, and you can set a monthly limit.'],
 ];
 
@@ -68,10 +68,10 @@ export default function Pricing() {
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <LogoMark className="w-7 h-7" />
-            <span className="font-display text-2xl tracking-tight">CreAI</span>
+            <span className="font-display text-2xl tracking-tight">Creai</span>
           </Link>
           <a href={APP_URL} className="font-mono-label text-[11px] tracking-[0.22em] uppercase border hairline px-4 py-2 hover:bg-cream hover:text-night transition-colors">
-            Open CreAI
+            Open Creai
           </a>
         </div>
       </nav>
