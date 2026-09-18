@@ -31,9 +31,12 @@ const PARTS = [
 // Drafted from the customer's own site, scheduled across the coming weeks, each
 // one waiting on a yes. The queue is the product; the posting is the easy part.
 const POSTS = [
-  { at: 600, when: 'Tue 9:00', on: 'Instagram', text: 'Frozen pipe season. A trickle overnight is cheaper than a burst.' },
-  { at: 1100, when: 'Wed 12:30', on: 'Facebook', text: 'Replaced a water heater in Bay View this morning.' },
-  { at: 1600, when: 'Fri 8:00', on: 'LinkedIn', text: 'Booking into next week for drain work.' },
+  { at: 500, when: 'Tue 9:00', on: 'Instagram', img: '/demo/post-1.webp',
+    text: 'Frozen pipe season. A trickle overnight is cheaper than a burst.' },
+  { at: 950, when: 'Wed 12:30', on: 'Facebook', img: '/demo/post-2.webp',
+    text: 'Replaced a water heater in Bay View this morning.' },
+  { at: 1400, when: 'Fri 8:00', on: 'LinkedIn', img: '/demo/post-3.webp',
+    text: 'Booking into next week for drain work.' },
 ];
 
 const ACTS = [
@@ -145,7 +148,7 @@ export function BuildLoop() {
 
       <div className="min-h-[17rem]">
         {act === 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr]">
+          <div className="grid grid-cols-1 md:grid-cols-[0.85fr_1.15fr]">
             <div className="p-6 md:p-7 border-b md:border-b-0 md:border-r hairline">
               <p className="font-mono-label text-[10px] tracking-[0.2em] uppercase text-cream-soft/40 mb-3">
                 you
@@ -161,115 +164,82 @@ export function BuildLoop() {
                   ready ? 'text-leaf' : 'text-cream-soft/30'
                 }`}
               >
-                {ready ? '● ready to publish' : '○ building'}
+                {ready ? '● signed-in client portal' : '○ building'}
               </p>
             </div>
-            <div className="p-6 md:p-7 space-y-3">
-              {PARTS.map((p) => (
-                <div
-                  key={p.label + p.at}
-                  className="transition-all duration-700 ease-out"
-                  style={{
-                    opacity: shown(p.at) ? 1 : 0,
-                    transform: shown(p.at) ? 'none' : 'translateY(10px)',
-                  }}
-                >
-                  {p.grid ? (
-                    <div className="grid grid-cols-3 gap-2">
-                      {[0, 1, 2].map((i) => (
-                        <div
-                          key={i}
-                          className="rounded-md bg-cream/[0.06] hairline border"
-                          style={{ height: p.h }}
-                        />
-                      ))}
-                    </div>
-                  ) : (
-                    <div
-                      className={`rounded-md hairline border ${
-                        p.accent ? 'bg-leaf/25' : 'bg-cream/[0.06]'
-                      }`}
-                      style={{ height: p.h, width: p.w }}
-                    />
-                  )}
-                  {p.label && (
-                    <p className="font-mono-label text-[10px] tracking-[0.2em] uppercase text-cream-soft/35 mt-1.5">
-                      {p.label}
-                    </p>
-                  )}
-                </div>
-              ))}
+            <div className="relative p-4 md:p-5">
+              {/* the real thing Creai renders, screenshotted from the product */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/demo/app.webp"
+                alt="A client portal built by Creai, showing outstanding and paid invoices"
+                className="w-full rounded-lg hairline border transition-all duration-1000 ease-out"
+                style={{
+                  opacity: shown(1500) ? 1 : 0,
+                  transform: shown(1500) ? 'none' : 'translateY(14px) scale(0.985)',
+                  clipPath: shown(1500) ? 'inset(0 0 0% 0)' : 'inset(0 0 100% 0)',
+                }}
+              />
             </div>
           </div>
         )}
-
         {act === 1 && (
-          <div className="p-6 md:p-7">
+          <div className="p-5 md:p-6">
             <p className="font-mono-label text-[10px] tracking-[0.2em] uppercase text-cream-soft/40 mb-4">
               drafted from your own site · nothing posts until you say so
             </p>
-            <div className="space-y-2.5">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {POSTS.map((p) => (
                 <div
                   key={p.when}
-                  className="rounded-lg hairline border p-3.5 transition-all duration-700 ease-out"
+                  className="rounded-lg hairline border overflow-hidden transition-all duration-700 ease-out"
                   style={{
                     opacity: shown(p.at) ? 1 : 0,
-                    transform: shown(p.at) ? 'none' : 'translateY(10px)',
+                    transform: shown(p.at) ? 'none' : 'translateY(12px)',
                   }}
                 >
-                  <div className="flex items-center gap-3 mb-1.5">
-                    <span className="font-mono-label text-[10px] tracking-[0.2em] uppercase text-cream-soft/45">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.img} alt="" className="w-full h-24 object-cover" />
+                  <div className="p-3">
+                    <p className="font-mono-label text-[9px] tracking-[0.18em] uppercase text-cream-soft/45 mb-1.5">
                       {p.when} · {p.on}
-                    </span>
-                    <span className="ml-auto flex gap-2">
-                      <span className="font-mono-label text-[10px] tracking-[0.18em] uppercase text-leaf">
+                    </p>
+                    <p className="text-cream-soft text-[13px] leading-snug mb-2.5">{p.text}</p>
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono-label text-[9px] tracking-[0.16em] uppercase text-night bg-leaf px-2 py-1 rounded">
                         approve
                       </span>
-                      <span className="font-mono-label text-[10px] tracking-[0.18em] uppercase text-cream-soft/30">
+                      <span className="font-mono-label text-[9px] tracking-[0.16em] uppercase text-cream-soft/35">
                         edit
                       </span>
-                    </span>
+                    </div>
                   </div>
-                  <p className="text-cream-soft text-sm leading-relaxed">{p.text}</p>
                 </div>
               ))}
             </div>
           </div>
         )}
 
-        {act === 2 && <GameAct into={into} />}
+        {act === 2 && <GameAct />}
       </div>
     </div>
   );
 }
 
-/** A small thing that genuinely runs, rather than a picture of one. */
-function GameAct({ into }: { into: number }) {
-  const paddle = 22 + Math.sin(into / 420) * 30;
-  const drop = ((into / 9) % 150) + 10;
-  const close = Math.abs(drop - 126) < 16;
+/** Real footage: a game built with Creai's own kit, captured while it played. */
+function GameAct() {
   return (
-    <div className="p-6 md:p-7 grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-6 items-center">
-      <div className="rounded-lg hairline border bg-night/70 relative h-[11rem] overflow-hidden">
-        <div
-          className="absolute w-3.5 h-3.5 rounded-sm bg-cream-soft/70"
-          style={{ left: `${20 + ((into / 13) % 60)}%`, top: drop }}
-        />
-        <div
-          className="absolute bottom-3 h-3.5 w-10 rounded-full"
-          style={{
-            left: `${paddle}%`,
-            background: close ? 'rgb(var(--leaf-rgb))' : 'rgba(244,241,234,0.75)',
-          }}
-        />
-        <p className="absolute top-2.5 left-3 font-mono-label text-[10px] tracking-[0.2em] uppercase text-cream-soft/40">
-          score {Math.floor(into / 900)}
-        </p>
-      </div>
+    <div className="p-4 md:p-5 grid grid-cols-1 md:grid-cols-[1.25fr_1fr] gap-5 items-center">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/demo/game.webp"
+        alt="A game built with Creai, playing"
+        className="w-full rounded-lg hairline border"
+      />
       <div>
         <p className="text-cream-soft leading-relaxed">
-          Browser games and real Godot builds, exported to the web and playable on a phone.
+          Playable games, in the browser or exported from Godot — with the art generated alongside
+          them.
         </p>
         <p className="font-mono-label text-[10px] tracking-[0.2em] uppercase text-cream-soft/40 mt-3">
           same sentence, different ambition
