@@ -47,21 +47,47 @@ const TOTAL = ACTS.reduce((n, a) => n + a.ms, 0);
 export function BuildLoop() {
   const [t, setT] = useState(0);
   const [still, setStill] = useState(false);
+  const [seen, setSeen] = useState(false);
+  const box = useRef<HTMLDivElement>(null);
   const frame = useRef(0);
 
+  // Nothing runs until it is looked at. An animation playing below the fold is
+  // heat, and it means the first thing a person sees is the middle of a story
+  // rather than the start of one.
   useEffect(() => {
+    const el = box.current;
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      setSeen(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setSeen(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: '0px 0px -15% 0px', threshold: 0.25 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!seen) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setStill(true);
       return;
     }
-    const start = performance.now();
+    // A beat after it eases in, so the typing starts once it has arrived.
+    const start = performance.now() + 420;
     const step = (now: number) => {
-      setT((now - start) % TOTAL);
+      setT(Math.max(0, now - start) % TOTAL);
       frame.current = requestAnimationFrame(step);
     };
     frame.current = requestAnimationFrame(step);
     return () => cancelAnimationFrame(frame.current);
-  }, []);
+  }, [seen]);
 
   useEffect(() => {
     const onVis = () => {
@@ -92,7 +118,12 @@ export function BuildLoop() {
 
   return (
     <div
-      className="relative rounded-xl overflow-hidden hairline border bg-night/60"
+      ref={box}
+      className="relative rounded-xl overflow-hidden hairline border bg-night/60 transition-all duration-700 ease-out motion-reduce:transition-none"
+      style={{
+        opacity: seen ? 1 : 0,
+        transform: seen ? 'none' : 'translateY(18px) scale(0.985)',
+      }}
       aria-label={ACTS[act].label}
       role="img"
     >

@@ -161,11 +161,11 @@ export default function Home() {
 
         {/* Room 00 — the field */}
         <header className="min-h-screen flex flex-col justify-end">
-          <div className="max-w-6xl mx-auto px-6 w-full pb-10">
+          <div className="max-w-6xl mx-auto px-6 w-full pt-28 pb-10">
             <p className="font-mono-label text-[11px] tracking-[0.28em] uppercase text-cream-soft mb-6">
               <span className="text-leaf">00</span> · The build-to-launch studio
             </p>
-            <h1 className="font-display text-[17vw] md:text-[9.5rem] leading-[0.95] tracking-tight mb-8 md:flex md:flex-wrap">
+            <h1 className="font-display text-[14vw] md:text-[9.5rem] leading-[0.95] tracking-tight mb-8 md:flex md:flex-wrap">
               {HEADLINE.map((word, i) => (
                 <span key={`${i}-${word}`} className="reveal-word block md:inline whitespace-nowrap mr-[0.22em]" style={{ animationDelay: `${0.2 + i * 0.22}s` }}>
                   {word}
