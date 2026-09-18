@@ -1,5 +1,6 @@
 import { ventures } from '@/lib/family';
 import { GenerativeCanvas } from '@/components/generative-canvas';
+import { BuildLoop } from '@/components/build-loop';
 import { Reveal } from '@/components/reveal';
 import { LogoMark } from '@/components/icons';
 
@@ -15,6 +16,42 @@ const MARQUEE = [
   'SITES · APPS · BROWSER GAMES',
   'YOU OWN THE OUTPUT',
   'WORKING BEATS WAITLIST',
+];
+
+// What is true today, in the words a customer would use. Nothing aspirational:
+// every line here is something that works right now, and saying otherwise is how
+// a launch page becomes a support queue.
+const DOES = [
+  {
+    title: 'People can sign in',
+    body:
+      'A client portal, bookings, orders, a members area. Each person sees their own things and nobody else\u2019s \u2014 enforced by the server, not by hoping the code remembered.',
+  },
+  {
+    title: 'You can take money',
+    body:
+      'Payments land in your own Stripe account, with your name on the statement. Creai never holds it, and you keep the relationship with your customer.',
+  },
+  {
+    title: 'Speak it instead of typing',
+    body:
+      'Describe your business out loud, from a phone, on a job site. It works the same in every browser and inside the app \u2014 not just where the browser happens to support it.',
+  },
+  {
+    title: 'Bring what you already have',
+    body:
+      'Got a site already? Drop the folder in. Creai hosts it, points your domain at it, and you never touch a DNS record.',
+  },
+  {
+    title: 'Go back to how it was',
+    body:
+      'Every version you publish is kept. Open an earlier one, look at it, put it back \u2014 and the one you replaced is still there to return to.',
+  },
+  {
+    title: 'Take it with you',
+    body:
+      'Export the whole thing whenever you like, and your domain is registered in your name. Leaving is a button, not a support ticket.',
+  },
 ];
 
 const FLOW = [
@@ -127,6 +164,12 @@ export default function Home() {
                     Start building →
                   </a>
                   <a
+                    href="/made"
+                    className="border hairline hover:border-leaf text-cream px-6 py-3 font-mono-label text-[12px] tracking-[0.2em] uppercase transition-colors"
+                  >
+                    See what people made
+                  </a>
+                  <a
                     href="https://skills.creai.dev"
                     className="border hairline hover:border-leaf text-cream px-6 py-3 font-mono-label text-[12px] tracking-[0.2em] uppercase transition-colors"
                   >
@@ -134,9 +177,9 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <p className="font-mono-label text-[11px] tracking-[0.2em] text-cream-soft/60 uppercase shrink-0">
-                scroll ↓
-              </p>
+              <div className="w-full md:max-w-xl shrink-0">
+                <BuildLoop />
+              </div>
             </div>
           </div>
           <MarqueeStrip />
@@ -160,6 +203,29 @@ export default function Home() {
             <Reveal delay={360}>
               <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mt-14">
                 Free to build. Publishing included. You keep what you make.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+
+        {/* Room 01.5 — what it can actually do */}
+        <section id="does" className="py-28 bg-night/40">
+          <div className="max-w-6xl mx-auto px-6">
+            <Reveal>
+              <RoomLabel n="01.5" title="What it does" />
+            </Reveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-10">
+              {DOES.map((d, i) => (
+                <Reveal key={d.title} delay={i * 80}>
+                  <h3 className="font-display text-3xl tracking-tight text-leaf mb-2">{d.title}</h3>
+                  <p className="text-cream-soft leading-relaxed">{d.body}</p>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal delay={420}>
+              <p className="font-mono-label text-[11px] tracking-[0.2em] uppercase text-cream-soft/50 mt-14">
+                No second tool to learn. No editor waiting behind the AI.
               </p>
             </Reveal>
           </div>
