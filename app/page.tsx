@@ -21,6 +21,20 @@ const MARQUEE = [
 // What is true today, in the words a customer would use. Nothing aspirational:
 // every line here is something that works right now, and saying otherwise is how
 // a launch page becomes a support queue.
+// The nine Creai can post to once connected. Listed plainly, because a customer
+// checks for the one they actually use.
+const NETWORKS = [
+  'Instagram',
+  'Facebook',
+  'Google Business',
+  'LinkedIn',
+  'X',
+  'Threads',
+  'TikTok',
+  'YouTube',
+  'Pinterest',
+];
+
 const DOES = [
   {
     title: 'People can sign in',
@@ -38,6 +52,11 @@ const DOES = [
       'Describe your business out loud, from a phone, on a job site. It works the same in every browser and inside the app \u2014 not just where the browser happens to support it.',
   },
   {
+    title: 'It markets you, and waits',
+    body:
+      'Posts drafted from your own website \u2014 Instagram, Facebook, LinkedIn, TikTok and five more \u2014 scheduled weeks ahead. Every one waits for your yes, until you decide it doesn\u2019t need to.',
+  },
+  {
     title: 'Bring what you already have',
     body:
       'Got a site already? Drop the folder in. Creai hosts it, points your domain at it, and you never touch a DNS record.',
@@ -46,6 +65,11 @@ const DOES = [
     title: 'Go back to how it was',
     body:
       'Every version you publish is kept. Open an earlier one, look at it, put it back \u2014 and the one you replaced is still there to return to.',
+  },
+  {
+    title: 'It keeps marketing you',
+    body:
+      'Creai reads your site, writes the weeks ahead, and schedules them across nine networks \u2014 then waits. Nothing posts until you approve that exact post.',
   },
   {
     title: 'Take it with you',
@@ -228,6 +252,53 @@ export default function Home() {
                 No second tool to learn. No editor waiting behind the AI.
               </p>
             </Reveal>
+          </div>
+        </section>
+
+
+        {/* Room 01.6 — the part that keeps going */}
+        <section id="marketing" className="py-28">
+          <div className="max-w-6xl mx-auto px-6">
+            <Reveal>
+              <RoomLabel n="01.6" title="After it's live" />
+            </Reveal>
+            <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-12 items-start">
+              <Reveal>
+                <h2 className="font-display text-4xl md:text-5xl tracking-tight text-leaf mb-5 leading-[1.05]">
+                  A site nobody visits
+                  <br />
+                  is a business card in a drawer.
+                </h2>
+                <p className="text-cream-soft leading-relaxed mb-5">
+                  Creai reads your own site to learn what you sell and how you sound, then writes
+                  the weeks ahead: three to five posts, scheduled, each pointing back at the page
+                  that answers it. No invented prices, no invented reviews, no awards you never
+                  won \u2014 only what is on your site or what you told it.
+                </p>
+                <p className="text-cream-soft leading-relaxed">
+                  Every post waits for you. They sit in a queue with the date they would go out,
+                  and nothing reaches anybody until you say yes to that one. Approving takes a
+                  tap; so does rewriting it.
+                </p>
+              </Reveal>
+              <Reveal delay={140}>
+                <div className="hairline border rounded-xl p-6">
+                  <p className="font-mono-label text-[10px] tracking-[0.2em] uppercase text-cream-soft/45 mb-4">
+                    Connect once
+                  </p>
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                    {NETWORKS.map((n) => (
+                      <p key={n} className="text-cream-soft text-sm">
+                        {n}
+                      </p>
+                    ))}
+                  </div>
+                  <p className="font-mono-label text-[10px] tracking-[0.2em] uppercase text-cream-soft/45 mt-6 pt-5 border-t hairline">
+                    Nothing posts without your approval
+                  </p>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </section>
 
