@@ -1,6 +1,7 @@
 import { ventures } from '@/lib/family';
 import { GenerativeCanvas } from '@/components/generative-canvas';
 import { BuildLoop } from '@/components/build-loop';
+import { FAQ, JsonLd, application, faqPage, graph, organisation, website } from '@/components/structured-data';
 import { Reveal } from '@/components/reveal';
 import { LogoMark } from '@/components/icons';
 
@@ -108,6 +109,7 @@ function MarqueeStrip() {
   );
   return (
     <div className="marquee border-y hairline py-3.5 bg-night-deep/60">
+      <JsonLd data={graph(organisation(), website(), application(), faqPage())} />
       {run}
       {run}
     </div>
@@ -298,6 +300,25 @@ export default function Home() {
                   </p>
                 </div>
               </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Room 01.8 — the questions people actually ask */}
+        <section id="questions" className="py-28">
+          <div className="max-w-6xl mx-auto px-6">
+            <Reveal>
+              <RoomLabel n="01.8" title="Before you start" />
+            </Reveal>
+            <div className="border-t hairline">
+              {FAQ.map((f, i) => (
+                <Reveal key={f.q} delay={i * 70}>
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-4 border-b hairline py-7">
+                    <h3 className="md:col-span-5 font-display text-2xl tracking-tight">{f.q}</h3>
+                    <p className="md:col-span-7 text-cream-soft leading-relaxed">{f.a}</p>
+                  </div>
+                </Reveal>
+              ))}
             </div>
           </div>
         </section>
