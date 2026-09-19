@@ -79,21 +79,24 @@ const DOES = [
   },
 ];
 
+// Three stages, not three features. The point is the whole arc: an idea becomes a
+// business with a domain, customers who can sign in and pay, and a marketing
+// engine that keeps working after you close the laptop.
 const FLOW = [
   {
     n: '01',
-    lead: 'Say it.',
-    rest: 'Type it or just talk. Describe what you do in plain words — no forms, no templates, no jargon.',
+    lead: 'Conceive.',
+    rest: 'Describe the business in a sentence. Creai works out who it serves, what it needs — a site, a working app, a playable game — and builds the first version while you watch.',
   },
   {
     n: '02',
-    lead: 'See it.',
-    rest: 'Your site takes shape in real time, right beside the conversation. Every answer, every tweak — instantly on screen.',
+    lead: 'Launch.',
+    rest: 'Your own domain, registered in your name. Customer accounts, bookings, payments into your Stripe. Reviewed on a phone and a desktop, then live in one tap.',
   },
   {
     n: '03',
-    lead: 'Own it.',
-    rest: 'Publish in one tap, line up your first posts, keep everything you make. Nothing sends, posts or spends until you tap yes.',
+    lead: 'Grow.',
+    rest: 'Ads written, directed and cut from your brand. Posts drafted for nine networks. Leads captured by voice. All of it waits in a queue for your yes — nothing goes out without you.',
   },
 ];
 
@@ -165,7 +168,7 @@ export default function Home() {
         <header className="min-h-screen flex flex-col justify-end">
           <div className="max-w-6xl mx-auto px-6 w-full pt-28 pb-10">
             <p className="font-mono-label text-[11px] tracking-[0.28em] uppercase text-cream-soft mb-6">
-              <span className="text-leaf">00</span> · The build-to-launch studio
+              <span className="text-leaf">00</span> · From idea to income
             </p>
             <h1 className="font-display text-[14vw] md:text-[9.5rem] leading-[0.95] tracking-tight mb-8 md:flex md:flex-wrap">
               {HEADLINE.map((word, i) => (
@@ -177,9 +180,9 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
               <div className="max-w-md">
                 <p className="text-cream-soft leading-relaxed mb-6">
-                  Describe it in a sentence. Watch a site, a working app, or a playable game
-                  take shape beside the conversation — reviewed on a phone and a desktop, and
-                  run, before you see it. Publish when you&apos;re ready. Nothing goes live until
+                  Everything a business needs to exist and grow, from one conversation.
+                  The site, the app your customers sign into, the domain in your name, the ads,
+                  the posts, the leads — built, checked and waiting for your approval. Nothing goes live until
                   you say so.
                 </p>
                 <div className="flex flex-wrap items-center gap-3">
@@ -450,7 +453,7 @@ export default function Home() {
                   <span className="font-display text-xl tracking-tight">Creai</span>
                 </a>
                 <p className="text-cream-soft text-sm leading-relaxed max-w-xs">
-                  Build a site, an app or a game by describing it, then launch when it&apos;s right.
+                  Conceive it, launch it, grow it. The whole business, from one conversation.
                 </p>
               </div>
               <div>

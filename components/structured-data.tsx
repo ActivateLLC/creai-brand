@@ -28,8 +28,9 @@ export function organisation() {
     url: SITE,
     logo: { '@type': 'ImageObject', url: `${SITE}/icon.png` },
     description:
-      'Creai turns a sentence into a working business: a site, an app your customers sign in to, ' +
-      'payments, a domain and the marketing that follows.',
+      'Creai takes a business from idea to income in one conversation: the site, the app ' +
+      'customers sign in to, the domain in your name, payments into your Stripe, and the ' +
+      'ads and posts that grow it — every step waiting for your approval.',
   };
 }
 
@@ -54,8 +55,9 @@ export function application() {
     url: APP,
     publisher: { '@id': `${SITE}/#organisation` },
     description:
-      'Describe a business in a sentence and Creai builds the site, the app people sign in to, ' +
-      'and the marketing — publishing only when you say so.',
+      'Conceive, launch and grow a business from one conversation. Creai builds the site, ' +
+      'the app, the game if that is the product, registers the domain, connects payments, ' +
+      'and writes, directs and cuts the ads — publishing only when you say so.',
     featureList: [
       'Websites and web apps built from a description',
       'Accounts, so customers sign in and see only their own things',

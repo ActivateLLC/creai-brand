@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
   title: "Creai — Say it. See it. Own it.",
   description:
-    "Describe your business in one sentence. Creai builds your site live, beside the conversation, then helps you connect your domain and draft your first campaign. Nothing goes out without your yes.",
-  keywords: "Creai, AI website builder, build to launch, AI agent, small business website, AI marketing, agent skills",
+    "From idea to income, in one conversation. Creai builds your site, the app your customers sign into, and a playable game if that's the business — registers your domain, takes payments into your Stripe, then writes, directs and cuts your ads and drafts your posts. Everything waits for your yes.",
+  keywords: "Creai, AI website builder, AI app builder, AI game builder, build to launch, AI marketing, AI ads, AI agent, small business, domain, Stripe",
   authors: [{ name: "Creai" }],
   openGraph: {
     title: "Creai — Say it. See it. Own it.",
-    description: "One sentence in. Your site, built live. Your domain and first campaign — every step on your yes.",
+    description: "Conceive it, launch it, grow it. The whole business from one conversation — site, app, domain, payments, ads and posts, every step on your yes.",
     url: SITE_URL,
     siteName: "Creai",
     locale: "en_US",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Creai — Say it. See it. Own it.",
-    description: "One sentence in. Your site, built live. Your domain and first campaign — every step on your yes.",
+    description: "Conceive it, launch it, grow it. The whole business from one conversation — site, app, domain, payments, ads and posts, every step on your yes.",
     images: ["/og.jpg"],
   },
   robots: { index: true, follow: true },
